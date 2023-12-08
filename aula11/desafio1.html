@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de País</title>
+    <style>
+        body {
+            background-color: rgb(167, 111, 219);
+            font: normal 20pt Arial;
+        }
+        h1 {
+            font-size: 30pt;
+        }
+        input {
+            font: normal 20pt Arial;
+        }
+        div#resposta {
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificando o País</h1>
+    <input type="text" name="txtp1" id="txtp1">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="resposta">
+
+    </div>
+    <script>
+        function verificar() {
+            var txtp1 = document.querySelector('input#txtp1')
+            var resposta = document.querySelector('div#resposta')
+
+            var pais = txtp1.value
+            if ( pais == 'Brasil' || pais == 'brasil' || pais == 'br' || pais == 'BR') {
+                resposta.innerHTML = 'Você é Brasileiro'
+            } else {
+                resposta.innerHTML = 'Você é estrangeiro'
+            }
+        }
+        
+    </script>
+</body>
+</html>
